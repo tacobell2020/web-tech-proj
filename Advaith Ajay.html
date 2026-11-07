@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Advaith Ajay</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=STIX+Two+Text:ital@0;1&display=swap">
+<style>
+:root{--bg:#0D0F12;--bg2:#14171B;--ink:#ECEAE4;--mut:#8D929C;--line:#242830;--acc:#7C9BFF;--acc2:#7CC4A6;--m:"STIX Two Text",Georgia,"Times New Roman",serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-.025em;font-weight:800}
+p{margin:0 0 14px;color:#C4C6CC;max-width:62ch}
+.w{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:96px 0 8px}
+h2{font-size:clamp(30px,5vw,46px);margin-bottom:26px}
+.k{color:var(--acc);font-size:14px;font-weight:700;margin-bottom:10px;display:block}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;background:rgba(13,15,18,.84);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-weight:800;text-decoration:none;color:var(--ink)}
+.links{display:flex;gap:2px}
+.links a{color:var(--mut);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:8px;transition:color .2s,background .2s}
+.links a:hover,.links a.on{color:var(--ink);background:var(--bg2)}
+.mb{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 60px;position:relative;overflow:hidden}
+.hero .w{position:relative;z-index:1}
+#cv{position:absolute;inset:0;width:100%;height:100%;opacity:.7}
+.hero h1{font-size:clamp(52px,11vw,112px);margin-bottom:22px}
+.sub{font-size:clamp(17px,2.2vw,21px);color:#C4C6CC;max-width:34em}
+.eq{font-family:var(--m);font-style:italic;color:var(--acc);font-size:clamp(18px,2.6vw,24px);margin-top:26px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.pill{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;color:var(--mut);background:rgba(13,15,18,.6)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.c2{grid-template-columns:repeat(2,1fr)}
+.box{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px}
+.box h3{font-size:18px;margin-bottom:12px}
+.box p{font-size:15px;color:var(--mut)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:13.5px;padding:4px 12px;border-radius:8px;background:#1C2025;color:#CFD1D6}
+.tag.d{background:none;border:1px dashed #3A3F4B;color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.lst{list-style:none;padding:0;margin:0}
+.lst li{padding:9px 0;border-bottom:1px solid var(--line);color:#C4C6CC;font-size:15px}
+.lst li:last-child{border:0}
+.fm{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px;transition:border-color .25s}
+.fm:hover{border-color:#3A4052}
+.fm .f{font-family:var(--m);font-style:italic;font-size:clamp(19px,2.4vw,24px);color:var(--ink);margin-bottom:12px;line-height:1.35;overflow-wrap:anywhere}
+.fm b{font-size:15px;font-weight:700}
+.fm span{display:block;color:var(--mut);font-size:14px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:16px;transition:border-color .25s,transform .25s}
+.card:hover{border-color:#3A4052;transform:translateY(-3px)}
+.card h3{font-size:24px;margin:10px 0 8px}
+.st{display:inline-block;font-size:12.5px;font-weight:700;padding:3px 11px;border-radius:999px;border:1px solid}
+.st.a{color:var(--acc2);border-color:#2F5A49}.st.b{color:var(--acc);border-color:#35457F}.st.c{color:var(--mut);border-color:#3A3F4B}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.more>div{overflow:hidden}
+.card.open .more{grid-template-rows:1fr}
+.in{padding-top:14px;border-top:1px solid var(--line);margin-top:14px}
+.in h4{margin:14px 0 8px;font-size:14px}
+.in ul{margin:0;padding-left:20px;color:#C4C6CC;font-size:15px}
+.tg{margin-top:14px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;transition:background .2s}
+.tg:hover{background:#1C2025}
+.big{padding:28px}
+.big h3{font-size:22px}
+.note{color:var(--mut);font-size:14px}
+footer{padding:80px 0 60px;color:var(--mut);font-size:14px}
+#top{position:fixed;right:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--bg2);color:var(--ink);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;transform:translateY(8px);z-index:40}
+#top.s{opacity:1;pointer-events:auto;transform:none}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.v{opacity:1;transform:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+@media(max-width:820px){
+.links{display:none;position:absolute;top:58px;left:0;right:0;flex-direction:column;background:var(--bg);padding:10px 22px 16px;border-bottom:1px solid var(--line)}
+.links.o{display:flex}.mb{display:block}
+.cols,.c2,.two{grid-template-columns:1fr}.two{gap:24px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="w"><a class="logo" href="#home">Advaith Ajay</a>
+<button class="mb" id="mb" aria-expanded="false" aria-controls="lk">Menu</button>
+<div class="links" id="lk"><a href="#about">About</a><a href="#maths">Mathematics</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#careers">Careers</a><a href="#masters">Master’s</a><a href="#interests">Interests</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero" id="home"><canvas id="cv" aria-hidden="true"></canvas><div class="w">
+<span class="k">Bengaluru, India</span>
+<h1>Advaith<br>Ajay</h1>
+<p class="sub">Second-year undergraduate at CHRIST, studying mathematics, statistics and data science, with a pull towards quantitative analysis and finance.</p>
+<div class="eq">dSₜ = μSₜ dt + σSₜ dWₜ</div>
+<div class="meta"><span class="pill">B.Sc. Data Science and Mathematics</span><span class="pill">CHRIST (Deemed to be University)</span><span class="pill">Expected 2028</span></div>
+</div></header>
+
+<main class="w">
+<section id="about" class="rv"><span class="k">About</span><h2>Mathematics first, then everything it unlocks.</h2>
+<div class="two"><div>
+<p>I’m an undergraduate interested in where mathematics, statistics, data science, quantitative analysis, finance and technology meet. I enjoy analytical problem-solving and seeing how quantitative methods apply to real problems.</p>
+<p>I like understanding why something works before using it, and I learn a lot outside the curriculum.</p></div>
+<ul class="lst"><li>Calm and composed</li><li>Disciplined and ambitious</li><li>Curious and analytical</li><li>Enjoys humour</li><li>Learns beyond the syllabus</li></ul></div></section>
+
+<section id="maths" class="rv"><span class="k">Education and academic interests</span><h2>CHRIST, B.Sc. Data Science and Mathematics.</h2>
+<p>Second year, expected graduation 2028, subject to the academic schedule. These are the areas I’m drawn to.</p>
+<div class="cols">
+<div class="fm"><div class="f">∀ε&gt;0 ∃N : n≥N ⇒ |aₙ − L| &lt; ε</div><b>Real analysis</b><span>Limits, sequences and convergence</span></div>
+<div class="fm"><div class="f">Av = λv</div><b>Linear algebra</b><span>Vector spaces and eigenstructure</span></div>
+<div class="fm"><div class="f">E[X] = ∫ x f(x) dx</div><b>Probability theory</b><span>Random variables and distributions</span></div>
+<div class="fm"><div class="f">θ̂ = argmax L(θ ; x)</div><b>Mathematical statistics and inference</b><span>Estimation and testing</span></div>
+<div class="fm"><div class="f">min f(x) s.t. g(x) ≤ 0</div><b>Optimisation</b><span>Constrained problems</span></div>
+<div class="fm"><div class="f">y = Xβ + ε</div><b>Econometrics</b><span>Models for economic data</span></div>
+<div class="fm"><div class="f">C = S N(d₁) − K e<sup>−rT</sup> N(d₂)</div><b>Financial mathematics</b><span>Pricing and quantitative finance</span></div>
+<div class="fm"><div class="f">∂u/∂t = α ∇²u</div><b>Applied mathematics</b><span>Mathematical modelling</span></div>
+<div class="fm"><div class="f">xₙ₊₁ = xₙ − f(xₙ)/f′(xₙ)</div><b>Pure maths and numerical methods</b><span>Structure, rigour and computation</span></div></div></section>
+
+<section id="skills" class="rv"><span class="k">Skills</span><h2>What I use, and what I’m still building.</h2>
+<div class="cols">
+<div class="box"><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">Java</span></div></div>
+<div class="box"><h3>Analytical</h3><div class="tags"><span class="tag">Statistical analysis</span><span class="tag">Data analysis</span><span class="tag">Statistical modelling</span><span class="tag">Data visualisation</span><span class="tag">Mathematical problem solving</span></div></div>
+<div class="box"><h3>Tools</h3><div class="tags"><span class="tag">Excel</span><span class="tag">Tableau</span><span class="tag">MySQL</span><span class="tag">VS Code</span><span class="tag">Blender</span></div></div></div>
+<div class="box" style="margin-top:16px"><h3>Currently developing</h3><div class="tags"><span class="tag d">Advanced probability and statistics</span><span class="tag d">Machine learning</span><span class="tag d">Quantitative research</span><span class="tag d">Financial modelling</span><span class="tag d">Econometrics</span><span class="tag d">Numerical methods</span><span class="tag d">Mathematical optimisation</span></div></div></section>
+
+<section id="experience" class="rv"><span class="k">Experience</span><h2>Sports Paddock.</h2>
+<div class="box"><h3>Statistics and Operations Intern · 3 months</h3>
+<p>Recorded match observations and player statistics, collected and organised data, and managed it in Excel. Also helped with events, registrations and bookings, operations, athlete and customer coordination, and social media.</p></div></section>
+
+<section id="projects" class="rv"><span class="k">Projects</span><h2>Ideas in progress.</h2>
+<p>Status labels show where each one stands. Nothing here is presented as finished.</p>
+
+<article class="card"><span class="st a">Concept in development</span><h3>ABSORB / SAGE: Sound Absorption, Gain and Extraction</h3>
+<p>An energy-harvesting concept that converts ambient acoustic energy into electrical energy for low-power IoT devices.</p>
+<div class="tags"><span class="tag">Helmholtz resonators</span><span class="tag">Piezoelectric transducers</span><span class="tag">PZT cantilever beams</span><span class="tag">Supercapacitors</span></div>
+<div class="more"><div><div class="in"><h4>Technologies explored</h4><ul><li>Acoustic energy harvesting</li><li>Bridge rectifiers and voltage regulation</li><li>Supercapacitor energy storage</li></ul><h4>Approach</h4><p>Mathematical modelling, physical prototyping and engineering design.</p><h4>Product direction</h4><p>A self-powered vibration monitoring node for industrial environments.</p></div></div></div>
+<button class="tg" aria-expanded="false">Show details</button></article>
+
+<article class="card"><span class="st b">Concept</span><h3>General-purpose BI AI agent</h3>
+<p>A business intelligence assistant that turns raw business datasets into useful analytical insight. The aim is a real analyst, not a basic dataset chatbot.</p>
+<div class="tags"><span class="tag">KPIs</span><span class="tag">Trend and anomaly detection</span><span class="tag">Dashboards</span></div>
+<div class="more"><div><div class="in"><h4>The system aims to</h4><ul><li>Clean and process business data</li><li>Calculate KPIs and identify trends</li><li>Detect anomalies and generate insights</li><li>Recommend actions</li><li>Produce dashboards and reports</li></ul><h4>Questions it should help answer</h4><ul><li>Why has profitability declined?</li><li>Which products have the highest margins?</li><li>What caused the decline in revenue?</li></ul></div></div></div>
+<button class="tg" aria-expanded="false">Show details</button></article>
+
+<article class="card"><span class="st c">Planned, nothing completed yet</span><h3>Quantitative and mathematical projects</h3>
+<p>A place for future mathematical and quantitative work. I’ll add real projects here as they exist.</p>
+<div class="more"><div><div class="in"><h4>Potential areas</h4><ul><li>Statistical modelling</li><li>Probability-based projects</li><li>Financial data analysis</li><li>Quantitative research</li><li>Econometric models</li><li>Numerical methods</li><li>Mathematical optimisation</li></ul></div></div></div>
+<button class="tg" aria-expanded="false">Show areas</button></article></section>
+
+<section id="careers" class="rv"><span class="k">Career interests</span><h2>Where I’d like to end up working.</h2>
+<p>These are developing interests, not established specialisations.</p>
+<div class="cols c2">
+<div class="box big"><h3>Quantitative finance</h3><div class="tags"><span class="tag">Quantitative research</span><span class="tag">Financial mathematics</span><span class="tag">Stochastic processes</span><span class="tag">Financial modelling</span><span class="tag">Risk analysis</span><span class="tag">Portfolio optimisation</span><span class="tag">Derivatives and pricing</span><span class="tag">Algorithmic trading</span></div></div>
+<div class="box big"><h3>Applied mathematics</h3><div class="tags"><span class="tag">Mathematical modelling</span><span class="tag">Optimisation</span><span class="tag">Numerical analysis</span><span class="tag">Applied probability</span><span class="tag">Statistical inference</span></div></div>
+<div class="box big"><h3>Data science and statistics</h3><div class="tags"><span class="tag">Statistical learning</span><span class="tag">Machine learning</span><span class="tag">Predictive modelling</span><span class="tag">Advanced analytics</span><span class="tag">Data-driven decision-making</span></div></div>
+<div class="box big"><h3>Economics and financial markets</h3><div class="tags"><span class="tag">Macroeconomics</span><span class="tag">Financial markets</span><span class="tag">Inflation and interest rates</span><span class="tag">Economic indicators</span><span class="tag">Econometrics</span></div></div></div></section>
+
+<section id="masters" class="rv"><span class="k">Postgraduate aspirations</span><h2>A master’s degree in Europe.</h2>
+<div class="box big"><h3>Bocconi University, Milan</h3><p>My main interest is the MSc in Data Science and Business Analytics.</p>
+<div class="tags" style="margin-bottom:16px"><span class="tag">Quantitative finance</span><span class="tag">Financial mathematics</span><span class="tag">Actuarial mathematics</span><span class="tag">Applied mathematics</span><span class="tag">Statistics</span><span class="tag">Econometrics</span></div>
+<p>Places I’m considering: Italy, Germany, the Netherlands, Singapore and other European countries. I’m also thinking about GMAT or GRE preparation.</p>
+<p class="note" style="margin:0">These are aspirations, not confirmed admissions or decisions.</p></div></section>
+
+<section id="interests" class="rv"><span class="k">Interests</span><h2>Outside the maths.</h2>
+<div class="tags"><span class="tag">Football and Chelsea FC</span><span class="tag">Table tennis, up to national level</span><span class="tag">Gym and fitness</span><span class="tag">Reading</span><span class="tag">Technology and startups</span><span class="tag">Mathematics and economics</span></div></section>
+
+<section id="contact" class="rv"><span class="k">Contact</span><h2>Say hello.</h2>
+<p>Happy to talk about mathematics, quantitative finance, data or ideas worth building.</p>
+<div class="tags"><span class="tag d">Email: add your address</span><span class="tag d">LinkedIn: add your profile link</span></div></section>
+</main>
+<footer><div class="w">Advaith Ajay · Bengaluru, India</div></footer>
+<button id="top" aria-label="Back to top">↑</button>
+<script>
+(function(){
+var $=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var mb=document.getElementById("mb"),lk=document.getElementById("lk");
+mb.onclick=function(){var o=lk.classList.toggle("o");mb.setAttribute("aria-expanded",o)};
+$("a",lk).forEach(function(a){a.onclick=function(){lk.classList.remove("o");mb.setAttribute("aria-expanded","false")}});
+$(".tg").forEach(function(b){b.onclick=function(){var c=b.closest(".card"),o=c.classList.toggle("open");b.setAttribute("aria-expanded",o);b.textContent=(o?"Hide ":"Show ")+(b.textContent.indexOf("areas")>-1?"areas":"details")}});
+var rv=$(".rv");
+if("IntersectionObserver" in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("v");io.unobserve(x.target)}})},{threshold:.08});rv.forEach(function(r){io.observe(r)})}else{rv.forEach(function(r){r.classList.add("v")})}
+var secs=$("section"),links=$("a",lk),t=document.getElementById("top");
+function sc(){var y=window.scrollY;t.classList.toggle("s",y>600);var cur="";secs.forEach(function(s){if(s.offsetTop-140<=y)cur=s.id});links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+cur)})}
+addEventListener("scroll",sc,{passive:true});sc();
+t.onclick=function(){scrollTo({top:0,behavior:"smooth"})};
+/* hero: random-walk paths, the discrete cousin of the SDE above */
+var cv=document.getElementById("cv"),cx=cv.getContext("2d"),N=260,P=[],n=0,W,H;
+var s=7;function r(){s|=0;s=s+0x6D2B79F5|0;var q=Math.imul(s^s>>>15,1|s);q=q+Math.imul(q^q>>>7,61|q)^q;return((q^q>>>14)>>>0)/4294967296}
+function g(){return Math.sqrt(-2*Math.log(r()+1e-9))*Math.cos(6.2832*r())}
+var lo=1e9,hi=-1e9;
+for(var k=0;k<6;k++){var y=0,a=[0];for(var i=1;i<N;i++){y+=0.04+g();a.push(y)}P.push(a);lo=Math.min(lo,Math.min.apply(0,a));hi=Math.max(hi,Math.max.apply(0,a))}
+function sz(){var d=devicePixelRatio||1;W=cv.clientWidth;H=cv.clientHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);dr(n)}
+function dr(m){cx.clearRect(0,0,W,H);P.forEach(function(a,k){cx.beginPath();for(var i=0;i<=m&&i<N;i++){var X=i/(N-1)*W,Y=H*.9-(a[i]-lo)/(hi-lo)*H*.75;i?cx.lineTo(X,Y):cx.moveTo(X,Y)}cx.strokeStyle=k==0?"rgba(124,155,255,.75)":"rgba(236,234,228,.16)";cx.lineWidth=k==0?1.6:1;cx.stroke()})}
+function an(){n+=1.4;dr(n);if(n<N)requestAnimationFrame(an)}
+n=matchMedia("(prefers-reduced-motion: reduce)").matches?N:0;sz();addEventListener("resize",sz);if(n<N)requestAnimationFrame(an);
+})();
+</script>
+</body>
+</html>
